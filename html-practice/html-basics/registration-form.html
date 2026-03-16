@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="register.php" method="POST">
+
+        <div id="user-info">
+            <div>
+                <label for="full_name">Full Name:</label>
+                <input type="text" name="full_name" id="full_name" required>
+            </div>
+            <br>
+            <div>
+                <label for="user_email">Email Address:</label>
+                <input type="email" name="user_email" id="user_email" required>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="security-section">
+            <label for="user_password">Password:</label>
+            <input type="password" name="user_password" id="user_password" required>
+        </div>
+
+        <hr>
+
+        <div id="gender-selection">
+            <h3>Gender</h3>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+        </div>
+
+        <div id="hobbies-selection">
+            <h3>Hobbies</h3>
+            <div> 
+                <input type="checkbox" name="hobbies[]" value="reading" id="reading_book">
+                <label for="reading_book">Reading Books</label>
+            </div>
+            <div>
+                <input type="checkbox" name="hobbies[]" value="sports" id="sports">
+                <label for="sports">Sports</label>
+            </div>
+            <div>
+                <input type="checkbox" name="hobbies[]" value="movies" id="movies">
+                <label for="movies">Movies</label>
+            </div>
+        </div>
+
+        
+
+        <div id="location-section">
+            <label for="country_select">Country:</label>
+            <select name="country" id="country_select">
+                <option value="">-- Please Choose --</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="TR">Turkey</option>
+                <option value="US">USA</option>
+            </select>
+        </div>
+
+     
+
+        <div id="message-section">      
+            <label for="user_message">Message:</label><br>
+            <textarea name="user_message" id="user_message" rows="5" cols="30" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <br>
+
+        <div id="form-actions">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
